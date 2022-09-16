@@ -4,7 +4,7 @@ scipy
 torchaudio
 torch
 mir_eval
-pydub
+librosa
 seaborn
 matplotlib
 tensorboard
