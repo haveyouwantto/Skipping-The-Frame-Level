@@ -3,12 +3,30 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-requirements= [i.strip() for i in open("requirements.txt").readlines()]
+# requirements= [i.strip() for i in open("requirements.txt").readlines()]
+
+requirements = [
+"ncls",
+"pretty_midi",
+"scipy",
+"torchaudio",
+"torch",
+"mir_eval",
+"pydub",
+"seaborn",
+"matplotlib",
+"tensorboard",
+"tqdm",
+"torch_optimizer",
+"sox",
+"soxr",
+"moduleconf"
+]
 
 
 setuptools.setup(
     name="transkun",
-    version="0.1.4",
+    version="2.0.1",
     author="Yujia Yan",
     description='Yet another tool for automatic piano transcription',
     long_description=long_description,
@@ -20,7 +38,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     packages=setuptools.find_packages(),
-    package_data={'transkun.pretrained':['*.pt']},
+    package_data={'transkun.pretrained':['*.pt', '*.conf']},
     python_requires=">=3.6",
     entry_points={
         'console_scripts':[
